@@ -1,0 +1,103 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "mount_file_id": "1xq9_7Ivr2Iw2fyIb8uwuWo53H4gbM3qA",
+      "authorship_tag": "ABX9TyPya7kTHjMyUfUrbvYFbdpK",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/rlaaudrb1104/Ai/blob/PJH/Titanic_Project\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 8,
+      "metadata": {
+        "id": "9CONyO-Z6tBQ"
+      },
+      "outputs": [],
+      "source": [
+        "import pandas as pd\n",
+        "\n",
+        "train = pd.read_csv('/content/drive/MyDrive/Colab Notebooks/train.csv')\n",
+        "train\n",
+        "\n",
+        "test = pd.read_csv('/content/drive/MyDrive/Colab Notebooks/test.csv')\n",
+        "test\n",
+        "\n",
+        "submission = pd.read_csv('/content/drive/MyDrive/Colab Notebooks/submission.csv')\n",
+        "submission\n",
+        "\n",
+        "submission.head()\n",
+        "\n",
+        "submission.to_csv('/content/drive/MyDrive/Colab Notebooks/submission.csv', index = False)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "train = pd.read_csv('/content/drive/MyDrive/Colab Notebooks/train.csv')\n",
+        "test = pd.read_csv('/content/drive/MyDrive/Colab Notebooks/test.csv')\n",
+        "submission = pd.read_csv('/content/drive/MyDrive/Colab Notebooks/submission.csv')\n",
+        "\n",
+        "len(train)\n",
+        "train.columns\n",
+        "train.info()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8BArPIjhtomq",
+        "outputId": "9249e4bd-9b71-44ae-baa9-402086f7a452"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'pandas.core.frame.DataFrame'>\n",
+            "RangeIndex: 891 entries, 0 to 890\n",
+            "Data columns (total 12 columns):\n",
+            " #   Column       Non-Null Count  Dtype  \n",
+            "---  ------       --------------  -----  \n",
+            " 0   PassengerId  891 non-null    int64  \n",
+            " 1   Survived     891 non-null    int64  \n",
+            " 2   Pclass       891 non-null    int64  \n",
+            " 3   Name         891 non-null    object \n",
+            " 4   Sex          891 non-null    object \n",
+            " 5   Age          714 non-null    float64\n",
+            " 6   SibSp        891 non-null    int64  \n",
+            " 7   Parch        891 non-null    int64  \n",
+            " 8   Ticket       891 non-null    object \n",
+            " 9   Fare         891 non-null    float64\n",
+            " 10  Cabin        204 non-null    object \n",
+            " 11  Embarked     889 non-null    object \n",
+            "dtypes: float64(2), int64(5), object(5)\n",
+            "memory usage: 83.7+ KB\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
